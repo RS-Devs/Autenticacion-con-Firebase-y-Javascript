@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>RSDEVSFLIX</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- favicon -->
+   <link rel="icon" href="images/favicon.png" type="image/gif" />
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="./css/style.css">
+   <!-- Media Queries -->
+   <link rel="stylesheet" href="./css/mediaqueries.css">
+   <!-- Toastify css -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+   <!-- Bootstrap 5.3 -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+   <!-- Javascript -->
+   <script src="./js/main.js" type="module"></script>
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+   <!-- header start -->
+   <div class="header_section">
+      <div class="header_main">
+
+         <div class="container-fluid">
+            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <div>
+               <p class="subtitle">Entra y disfruta del contenido exclusivo que hay al otro lado!</p>
+            </div>
+            <div class="menu_main">
+               <ul>
+                  <li class="active logged-out">
+                     <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</a>
+                  </li>
+                  <li class="active logged-out">
+                     <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Registrarse</a>
+                  </li>
+                  <li class="logged-in" >
+                     <a href="#" id="logout">Cerrar Sesión</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <!-- header end -->
+
+
+      <div class="container p-4">
+         <div class="row">
+            <div class="col-md-6 offset-md-3">
+               <ul class="list-group posts"></ul>
+            </div>
+         </div>
+      </div>
+
+
+
+   </div>
+
+   <!-- Login Modal -->
+   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content bg-black modal-style">
+            <div class="modal-header">
+               <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Iniciar Sesión</h1>
+               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+
+               <form id="login-form">
+                  <div class="mb-3 text-white">
+                     <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                     <input type="email" class="form-control inputs" id="login-email" aria-describedby="emailHelp"
+                        required>
+                  </div>
+                  <div class="mb-3 text-white">
+                     <label for="exampleInputPassword1" class="form-label ">Contraseña</label>
+                     <input type="password" class="form-control inputs" id="login-password" required>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary btn-submit w-100 mb-3">Iniciar Sesión</button>
+               </form>
+
+               <button type="button" class="btn btn-outline-info w-100" id="googleLogin">
+                  <img src="./images/google.png" alt="Google" width="20px" style="margin-right:5px;">
+                  Google
+               </button>
+
+               <button type="button" class="btn btn-outline-primary w-100" id="facebookLogin">
+                  <img src="./images/facebook.png" alt="Google" width="25px" style="margin-right:5px;">
+                  Facebook 
+               </button>
+               
+               
+
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Register Modal -->
+   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content bg-black modal-style">
+            <div class="modal-header">
+               <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Registrarse</h1>
+               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+
+               <form id="register-form">
+                  <div class="mb-3 text-white">
+                     <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                     <input type="email" class="form-control inputs" id="register-email" aria-describedby="emailHelp"
+                        required>
+                  </div>
+                  <div class="mb-3 text-white">
+                     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                     <input type="password" class="form-control inputs" id="register-password" required>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-submit">Registrarse</button>
+               </form>
+
+
+
+
+
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+
+   <footer class="footer">
+      
+      <a class="footer" target="_blank" href="./policy-terms/privacy.html">Politicas de privacidad</a>
+      <a class="footer" target="_blank" href="./policy-terms/terms.html">Terminos y condiciones</a>
+
+    </footer>
+    
+
+
+   <!-- Bootstrap 5.3 JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- Toastify -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+
+</html>

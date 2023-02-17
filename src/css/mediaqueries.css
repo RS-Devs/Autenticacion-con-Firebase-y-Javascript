@@ -1,0 +1,16 @@
+
+
+  /* Estilos para pantallas menores a 600px */
+@media (max-width: 600px) {
+    /* ajusta el tamaño del botón */
+    .menu_main .logged-out a {
+      font-size: 0.8em !important;
+      padding: 0.5em 1em !important;
+    }
+    /* modifica la posición del botón */
+    .menu_main .logged-out {
+      text-align: center !important;
+    }
+  }
+  
+  
